@@ -102,6 +102,14 @@ terraform init
 terraform plan
 terraform apply
 ```
+- View Nodes
+
+```
+eks-node-viewer --resources cpu,memory
+```
+
+- Output (Might change based on what node Karpenter chooses to provision)
+
 
 - Remove nginx pods to scale down the nodes
 
@@ -149,6 +157,14 @@ terraform init
 terraform plan
 terraform apply
 ```
+
+- View Nodes
+
+```
+eks-node-viewer --resources cpu,memory
+```
+
+- Output
 
 - Add Nginx Deployment to test autoscaling
 
