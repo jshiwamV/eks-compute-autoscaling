@@ -43,7 +43,6 @@ output "cluster_certificate_authority_data" {
     sensitive = true
 }
 
-output "cluster_token" {
-    value = data.aws_eks_cluster_auth.config.token
-    sensitive = true
+output "eks_managed_node_group_id" {
+  value = module.eks_managed_node_group.node_group_id
 }

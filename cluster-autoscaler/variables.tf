@@ -1,9 +1,3 @@
-variable "replica_count" {
-  type        = string
-  default     = "5"
-  description = "number of replicas for the deployment"
-}
-
 variable "region" {
     type = string
     description = "region where the EKS cluster exists"
@@ -22,11 +16,6 @@ variable "cluster_endpoint" {
 variable "cluster_certificate_authority_data" {
   type        = string
   description = "eks cluster certificate authority"
-}
-
-variable "cluster_token" {
-    type = string
-    description = "eks cluster access token"
 }
 
 variable "cluster_autoscaler_irsa_name" {

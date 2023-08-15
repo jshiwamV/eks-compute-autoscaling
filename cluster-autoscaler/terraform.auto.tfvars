@@ -1,1 +1,6 @@
-replica_count = "10"
+cluster_autoscaler_irsa_arn = ""
+cluster_autoscaler_irsa_name = "cluster-autoscaler"
+cluster_certificate_authority_data = ""
+cluster_endpoint = ""
+cluster_name = "autoscaler-demo"
+region = "us-west-2"

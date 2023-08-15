@@ -1,0 +1,8 @@
+cluster_name                       = "autoscaler-demo"
+region                             = "us-west-2"
+cluster_certificate_authority_data = ""
+cluster_endpoint                   = ""
+karpenter_instance_profile_name    = ""
+karpenter_irsa_arn                 = ""
+karpenter_role_arn                 = ""
+eks_managed_node_group_id          = ""

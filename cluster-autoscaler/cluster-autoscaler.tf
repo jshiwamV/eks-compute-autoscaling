@@ -12,16 +12,9 @@ resource "helm_release" "cluster-autoscaler" {
 autoDiscovery:
   clusterName: ${var.cluster_name}
 
+
 awsRegion: ${var.region}
 
-
-resources:
-  limits:
-    cpu: 0.5
-    memory: 1000Mi
-  requests:
-    cpu: 0.1
-    memory: 500Mi
 
 rbac:
   serviceAccount:
@@ -31,38 +24,3 @@ rbac:
 EOT
   ]
 }
-
-
-resource "helm_release" "kube-test-container" {
-  name             = "kube-test-container"
-  namespace        = "kube-test-container"
-  create_namespace = true
-
-  repository = "https://raw.githubusercontent.com/sverrirab/kube-test-container/master/helm/charts/"
-  chart      = "kube-test-container"
-  version    = "1.0.0"
-
-  wait = true
-  values = [<<-EOT
-replicaCount: ${var.replica_count}
-image:
-  repository: sverrirab/kube-test-container
-  tag: v1.0
-  pullPolicy: IfNotPresent
-service:
-  name: kube-test-container
-  type: LoadBalancer
-  externalPort: 80
-  internalPort: 8000
-resources:
-  limits:
-    cpu: 0.1
-    memory: 250Mi
-  requests:
-    cpu: 0.05
-    memory: 250Mi
-EOT
-  ]
-}
-
-
