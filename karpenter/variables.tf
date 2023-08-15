@@ -1,9 +1,3 @@
-variable "replica_count" {
-  type        = string
-  default     = "5"
-  description = "number of replicas for the deployment"
-}
-
 variable "region" {
   type        = string
   description = "region where the EKS cluster exists"
