@@ -171,6 +171,12 @@ eks-node-viewer --resources cpu,memory
 
 <img width="1040" alt="Screenshot 2023-08-15 at 5 42 47 PM" src="https://github.com/jshiwamV/eks-compute-autoscaling/assets/117976281/ebc2a0e0-eaac-4584-8891-3fc8a572b5ca">
 
+## Destroy the Infrastructure
+
+```
+cd infrastructure
+terraform destroy --auto-approve
+```
 
 ## Configure Karpenter and Cluster Autoscaler According to Best Practices
 
