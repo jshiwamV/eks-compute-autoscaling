@@ -73,7 +73,7 @@ terraform apply
 ```
 
 ##  Nginx Pods to test Autoscaling
-- Add the required output vaules in karpenter/terraform.auto.tfvars
+- Add the required vaules in karpenter/terraform.auto.tfvars
 
 ```
 cluster_name                       = "autoscaler-demo"
@@ -117,7 +117,7 @@ cd infrastructure
 terraform output -json
 ```
 
-- Add the required output vaules in karpenter/terraform.auto.tfvars
+- Add the required vaules in cluster-autoscaler/terraform.auto.tfvars
 
 ```
 cluster_autoscaler_irsa_arn = ""
