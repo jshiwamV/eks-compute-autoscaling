@@ -23,6 +23,13 @@ brew install terraform
 brew install kubernetes-cli
 ```
 
+## Install EKS Node Viewer
+
+```
+brew tap aws/tap
+brew install eks-node-viewer
+```
+
 ## Setup Infrastructure
 The following commands assume you are in `eks-compute-autoscaling` directory
 
@@ -70,6 +77,12 @@ cd karpenter
 terraform init
 terraform plan
 terraform apply
+```
+
+- View the provisioned nodes by default
+
+```
+eks-node-viewer --resources cpu,memory 
 ```
 
 ##  Nginx Pods to test Autoscaling
