@@ -109,6 +109,7 @@ eks-node-viewer --resources cpu,memory
 ```
 
 - Output (Might change based on what node Karpenter chooses to provision)
+<img width="1040" alt="Screenshot 2023-08-15 at 5 18 18 PM" src="https://github.com/jshiwamV/eks-compute-autoscaling/assets/117976281/5044fc6b-58f8-4033-9da8-17697e702b56">
 
 
 - Remove nginx pods to scale down the nodes
@@ -165,6 +166,9 @@ eks-node-viewer --resources cpu,memory
 ```
 
 - Output
+
+<img width="1040" alt="Screenshot 2023-08-15 at 5 42 47 PM" src="https://github.com/jshiwamV/eks-compute-autoscaling/assets/117976281/ebc2a0e0-eaac-4584-8891-3fc8a572b5ca">
+
 
 - Add Nginx Deployment to test autoscaling
 
